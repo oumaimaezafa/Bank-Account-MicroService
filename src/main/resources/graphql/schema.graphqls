@@ -1,0 +1,24 @@
+type Query{
+   accountList :[Compte],
+   compteDTOById(id:String):Compte
+
+}
+
+type Mutation{
+    saveAccount(compte: AccountDTO):Compte
+
+}
+
+type Compte{
+    id: String,
+    createdAt: Float,
+    currency : String,
+    Balance: Float,
+    typeAccount: String
+}
+
+input AccountDTO{
+    currency : String,
+    Balance: Float,
+    type: String
+}
